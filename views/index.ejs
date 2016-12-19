@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <meta name="keywords" content="音乐可视化,webAuido,passion,passionate,music,音乐,HTML5,canvas,css3,自适应">
+    <title><%= title %></title>
+    <meta name="Author" content="Jhy">
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/index.css' />
+  </head>
+  <body>
+    <header>
+  		<h1><%= title %></h1>
+      <ul class="type" id="type">
+        <li data-type="dot">Dot</li>
+        <li data-type="column" class="selected01">Column</li>
+      </ul>
+  		<p>
+  			Volume<input type="range" id="volume" min="0" max="100" value="60">
+  		</p>
+  	</header>  	
+    <div class="left">
+    	<ul id="list">
+    		<% music.forEach(function (name) {%>
+			<li title="<%=name %>"><%= name %></li>
+		<%})%>
+    	</ul>
+    </div>
+    <div class="right" id="box"></div>
+    <script type="text/javascript" src="javascripts/MusicVisualizer.js"></script>
+    <script type="text/javascript" src="javascripts/index.js"></script>
+  </body>
+</html>
